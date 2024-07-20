@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  border: none;  
+}
+
+body, html {
+  height: 100vh;
+  width: 100%;
+  background-color: aqua;
+  display: flex; 
+  flex-direction: column; 
+}
+
+.header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(22, 2, 16);
+}
+
+.content {  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(19, 1, 18);  
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.single-card {
+  margin-bottom: 20px;  
+}
+
+.double-cards {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  transition:transform 0.5s  ease, opacity 0.5s ease-out;
+}
+
+.card-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+  transition: transform 0.5s  ease, opacity 0.5s ease-out; /* Adiciona a transição */
+}
+
+.card {
+  width: 200px;
+}
+
+.card-container:hover {
+  transform: translateY(-10px); /* Desloca o card para cima */
+}
+
+.icon-wrapper {
+  position: absolute;
+  bottom: 224px;
+  right: 0px;
+  display: flex;
+  filter: invert(240%);   
+}
+
+.icon-wrapper:hover { 
+  filter: none;
+}
+.info{  
+  position: absolute;
+  bottom: 100px;
+  right: 6px;
+  display: flex;
+   
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+.info:hover{
+  filter: invert(80%);
+  transform: scale(1.01);  
+  transition: all 0.4s ease-out; 
+}
+.icons:hover {
+  cursor: pointer;
+  transform: scale(1.1);  
+  transition: all 0.4s ease-out;  
+}
+.card-container.hidden {
+  opacity: 0; /* Define a opacidade para 0 quando a classe hidden é adicionada */
+}
+.double-cards.hidden {
+  opacity: 0; /* Define a opacidade para 0 quando a classe hidden é adicionada */
+}
