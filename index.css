@@ -88,9 +88,7 @@ h5:hover{
   filter: invert(240%);   
 }
 
-.icon-wrapper:hover { 
-  filter: none;
-}
+
 .info{  
   position: absolute;
   bottom: 100px;
@@ -101,19 +99,153 @@ h5:hover{
   width: 30px;
   cursor: pointer;
 }
-.info:hover{
+#iconLinkedin1:hover{
   filter: invert(80%);
   transform: scale(1.01);  
   transition: all 0.4s ease-out; 
 }
-.icons:hover {
+#iconLinkedin2:hover{
+  filter: invert(80%);
+  transform: scale(1.01);  
+  transition: all 0.4s ease-out; 
+}
+#iconLinkedin3:hover{
+  filter: invert(80%);
+  transform: scale(1.01);  
+  transition: all 0.4s ease-out; 
+}
+.info:hover {
+  filter: invert(80%);
   cursor: pointer;
-  transform: scale(1.1);  
+  transform: scale(1.01);  
   transition: all 0.4s ease-out;  
+}
+.infoIcon{
+  position: absolute;
+  bottom: 100px;
+  right: 6px;
+  display: flex;
+   
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+.infoIconRo{
+  position: absolute;
+  bottom: 100px;
+  right: 6px;
+  display: flex;
+   
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+.infoIconB{
+  position: absolute;
+  bottom: 100px;
+  right: 6px;
+  display: flex;
+   
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
 }
 .card-container.hidden {
   opacity: 0; /* Define a opacidade para 0 quando a classe hidden é adicionada */
 }
 .double-cards.hidden {
   opacity: 0; /* Define a opacidade para 0 quando a classe hidden é adicionada */
+}
+.infoContainer{
+  display:none;
+  justify-content: center;
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  background-color: rgb(5, 143, 255);
+  left: 100px;
+  font-family: "Playwrite HR";
+  font-weight: bold;
+  transition: 0.6s ease-in-out;
+  color: white;
+  border-radius: 9px;
+}
+.infoContainer:hover{
+  border-bottom: 8px solid greenyellow;
+}
+.infoContainerRo{
+  position: absolute;
+  display:none;
+  width: 400px;
+  height: 200px;
+  background-color: rgb(5, 143, 255);
+  left: -610px;
+  font-family: "Playwrite HR";
+  font-weight: bold;
+  color: white;
+  border-radius: 9px;
+  justify-content: center;
+  transition: 0.6s ease-in-out;
+}
+.infoContainerRo:hover{
+  border-bottom: 8px solid rgb(245, 0, 163);
+}
+.infoContainerB{
+  position: absolute;
+  display:none;
+  justify-content: center;
+  width: 400px;
+  height: 200px;
+  background-color: rgb(5, 143, 255);
+  left: 100px;
+  font-family: "Playwrite HR";
+  font-weight: bold;
+  transition: 0.6s ease-in-out;
+  color: white;
+  border-radius: 9px;
+}
+.infoContainerB:hover{
+  border-bottom: 8px solid rgb(245, 0, 0);
+}
+/* close icon edu */
+.closeIcon{
+  display:flex;
+  width: 25px;
+  height: 25px;
+  position: absolute;  
+  cursor:pointer;
+  right: 10px;
+  top: 10px;
+}
+.closeIcon:hover{
+  transform: scale(1.1);
+  filter: invert(80%);
+}
+/* Close icon Rosinho */
+.closeIconRo{
+  display:flex;
+  width: 25px;
+  height: 25px;
+  position: absolute;  
+  cursor:pointer;
+  left: 10px;
+  top: 10px;
+}
+.closeIconRo:hover{
+  transform: scale(1.1);
+  filter: invert(80%);
+}
+
+.closeIconB{
+  display:flex;
+  width: 25px;
+  height: 25px;
+  position: absolute;  
+  cursor:pointer;
+  right: 10px;
+  top: 10px;
+}
+.closeIconB:hover{
+  transform: scale(1.1);
+  filter: invert(80%);
 }
