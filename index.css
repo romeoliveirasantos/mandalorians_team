@@ -252,11 +252,38 @@ h5:hover{
 .SongContainer{
   position:absolute;
   display: flex;
-  margin-top: 145px;
-  
-  
+  margin-top: 145px;    
 }
+
 .songButton{
+  background-color: black;
+  width: 240px;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+.roSongContainer{
+  position:absolute;
+  display: flex;
+  margin-top: 145px;    
+}
+
+.roSongButton{
+  background-color: black;
+  width: 240px;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+.bSongContainer{
+  position:absolute;
+  display: flex;
+  margin-top: 145px;    
+}
+
+.bSongButton{
   background-color: black;
   width: 240px;
   height: 40px;
@@ -281,6 +308,33 @@ h5:hover{
   transition: opacity 1s ease;
 }
 .equalizerPlay{
+  opacity: 1;  
+}
+.equalizerR {  
+  display: flex;
+  align-items: flex-end;
+  height: -3px;
+  gap: 5px;
+  padding: 20px;
+  width: 170%;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+.equalizerPlayR{
+  opacity: 1;  
+}
+
+.equalizerB {  
+  display: flex;
+  align-items: flex-end;
+  height: -3px;
+  gap: 5px;
+  padding: 20px;
+  width: 170%;
+  opacity:0;
+  transition: opacity 1s ease;
+}
+.equalizerPlayB{
   opacity: 1;  
 }
 

@@ -1,7 +1,9 @@
 const div1 = document.querySelector('.double-cards');
 const h5Header = document.querySelector('.hFrase');
 const audio = new Audio('./assets/comoDeveSer.mp3');
-const audioEdu = new Audio('./assets/eduMentor.mp3')
+const audioEdu = new Audio('./assets/eduMentor.mp3');
+const audioRo = new Audio('./assets/RosinhuOEscolhido.mp3');
+const audioB = new Audio('./assets/BFelix2.mp3')
 const divInfo = document.querySelector('.infoContainer');
 const divInfoRo = document.querySelector('.infoContainerRo');
 const infoIcon = document.querySelector('.infoIcon');
@@ -13,8 +15,13 @@ const infoIconB = document.querySelector('.infoIconB');
 const closeIconB = document.querySelector('.closeIconB');
 const eduBtnSong = document.querySelector('#eduBtnSong');
 const equalizerBar = document.querySelector('.equalizer');
-let isAudioPlaying = false;
+const RequalizerBar = document.querySelector('.equalizerR');
+const BequalizerBar = document.querySelector('.equalizerB');
+const roBtnSong = document.querySelector('#roBtnSong');
+const bBtnSong = document.querySelector('#bBtnSong');
 
+
+let isAudioPlaying = false;
 function disableClicks() {
   document.body.style.pointerEvents = 'none';
 }
@@ -39,6 +46,18 @@ eduBtnSong.addEventListener('click', () => {
   equalizerBar.classList.add('equalizerPlay');
 });
 
+//play song Rosinhu button
+roBtnSong.addEventListener('click', () => {
+  playAudio(audioRo);
+  RequalizerBar.classList.add('equalizerPlayR');
+});
+
+//play song Bruno button
+bBtnSong.addEventListener('click', () => {
+  playAudio(audioB);
+  BequalizerBar.classList.add('equalizerPlayB');
+});
+
 //play audio Como deve ser
 h5Header.addEventListener('mouseover', () => {
   playAudio(audio);
@@ -47,8 +66,22 @@ h5Header.addEventListener('mouseover', () => {
 // Eventos para reativar cliques quando o áudio termina
 audioEdu.addEventListener('ended', () => {
   isAudioPlaying = false;
-  equalizerBar.classList.remove('equalizerPlay');
   enableClicks();
+  equalizerBar.classList.remove('equalizerPlay');
+});
+
+// Eventos para reativar cliques quando o áudio termina
+audioRo.addEventListener('ended', () => {
+  isAudioPlaying = false;
+  enableClicks();
+  RequalizerBar.classList.remove('equalizerPlayR');
+});
+
+// Eventos para reativar cliques quando o áudio termina
+audioB.addEventListener('ended', () => {
+  isAudioPlaying = false;
+  enableClicks();
+  BequalizerBar.classList.remove('equalizerPlayB');
 });
 
 audio.addEventListener('ended', () => {
