@@ -61,6 +61,7 @@ bBtnSong.addEventListener('click', () => {
 //play audio Como deve ser
 h5Header.addEventListener('mouseover', () => {
   playAudio(audio);
+  h5Header.classList.add('hFraseAfter');
 });
 
 // Eventos para reativar cliques quando o áudio termina
@@ -87,6 +88,7 @@ audioB.addEventListener('ended', () => {
 audio.addEventListener('ended', () => {
   isAudioPlaying = false;
   enableClicks();
+  h5Header.classList.remove('hFraseAfter');
 });
 
 //Card effects
