@@ -1,6 +1,7 @@
 const div1 = document.querySelector('.double-cards');
 const h5Header = document.querySelector('.hFrase');
 const audio = new Audio('./assets/comoDeveSer.mp3');
+const audioEdu = new Audio('./assets/eduMentor.mp3')
 const divInfo = document.querySelector('.infoContainer');
 const divInfoRo = document.querySelector('.infoContainerRo');
 const infoIcon = document.querySelector('.infoIcon');
@@ -10,12 +11,50 @@ const closeIconRo = document.querySelector('.closeIconRo');
 const divInfoB = document.querySelector('.infoContainerB');
 const infoIconB = document.querySelector('.infoIconB');
 const closeIconB = document.querySelector('.closeIconB');
+const eduBtnSong = document.querySelector('#eduBtnSong');
+const equalizerBar = document.querySelector('.equalizer');
+let isAudioPlaying = false;
+
+function disableClicks() {
+  document.body.style.pointerEvents = 'none';
+}
+
+function enableClicks() {
+  document.body.style.pointerEvents = 'auto';
+}
+
+// Função para iniciar o áudio e desativar cliques
+function playAudio(audioElement) {
+  if (!isAudioPlaying) {
+    audioElement.currentTime = 0;
+    audioElement.play();
+    isAudioPlaying = true;
+    disableClicks();
+  }
+}
+
+//play song edu button
+eduBtnSong.addEventListener('click', () => {
+  playAudio(audioEdu);
+  equalizerBar.classList.add('equalizerPlay');
+});
 
 //play audio Como deve ser
-h5Header.addEventListener('mouseover', ()=>{
-  audio.currentTime = 0;
-  audio.play();         
-})
+h5Header.addEventListener('mouseover', () => {
+  playAudio(audio);
+});
+
+// Eventos para reativar cliques quando o áudio termina
+audioEdu.addEventListener('ended', () => {
+  isAudioPlaying = false;
+  equalizerBar.classList.remove('equalizerPlay');
+  enableClicks();
+});
+
+audio.addEventListener('ended', () => {
+  isAudioPlaying = false;
+  enableClicks();
+});
 
 //Card effects
 div1.addEventListener('click', ()=>{
