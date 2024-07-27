@@ -44,18 +44,21 @@ function playAudio(audioElement) {
 eduBtnSong.addEventListener('click', () => {
   playAudio(audioEdu);
   equalizerBar.classList.add('equalizerPlay');
+  eduBtnSong.src = './assets/pauseIcon.png';
 });
 
 //play song Rosinhu button
 roBtnSong.addEventListener('click', () => {
   playAudio(audioRo);
   RequalizerBar.classList.add('equalizerPlayR');
+  roBtnSong.src = './assets/pauseIcon.png';
 });
 
 //play song Bruno button
 bBtnSong.addEventListener('click', () => {
   playAudio(audioB);
   BequalizerBar.classList.add('equalizerPlayB');
+  bBtnSong.src = './assets/pauseIcon.png';
 });
 
 //play audio Como deve ser
@@ -69,6 +72,7 @@ audioEdu.addEventListener('ended', () => {
   isAudioPlaying = false;
   enableClicks();
   equalizerBar.classList.remove('equalizerPlay');
+  eduBtnSong.src = './assets/playButton.png';
 });
 
 // Eventos para reativar cliques quando o áudio termina
@@ -76,6 +80,7 @@ audioRo.addEventListener('ended', () => {
   isAudioPlaying = false;
   enableClicks();
   RequalizerBar.classList.remove('equalizerPlayR');
+  roBtnSong.src = './assets/playButton.png';
 });
 
 // Eventos para reativar cliques quando o áudio termina
@@ -83,6 +88,7 @@ audioB.addEventListener('ended', () => {
   isAudioPlaying = false;
   enableClicks();
   BequalizerBar.classList.remove('equalizerPlayB');
+  bBtnSong.src = './assets/playButton.png';
 });
 
 audio.addEventListener('ended', () => {
