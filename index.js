@@ -62,7 +62,7 @@ bBtnSong.addEventListener('click', () => {
 });
 
 //play audio Como deve ser
-h5Header.addEventListener('mouseover', () => {
+h5Header.addEventListener('click', () => {
   playAudio(audio);
   h5Header.classList.add('hFraseAfter');
 });
