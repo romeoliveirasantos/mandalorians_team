@@ -379,3 +379,44 @@ body, html {
     height: 30px;
   }
 }
+
+
+/* Media Queries para Responsividade */
+
+/* Telas grandes (desktops) */
+@media (min-width: 1024px) {
+  .double-cards {
+    flex-direction: row;
+  }
+}
+
+/* Telas médias (tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .double-cards {
+    flex-direction: row;
+    .card-container {
+      width: 45%;
+    }
+  }
+
+  .card {
+    width: 150px;
+  }
+}
+
+/* Telas pequenas (smartphones) */
+@media (max-width: 767px) {
+  .double-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100px;
+  }
+
+  .card-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
